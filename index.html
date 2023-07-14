@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Online Shop</title>
+  <style>
+    /* Add your CSS styling here */
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="pageView()">Home</a></li>
+        <li><a href="#" onclick="pageView()">Shop</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Welcome to Our Online Shop</h1>
+    <button onclick="addToCart()">Add to cart</button>
+  </main>
+
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1269438960355048'); // Insert your Facebook Pixel ID here
+    fbq('track', 'PageView');
+
+    // Custom functions for Facebook Pixel events
+    function pageView() {
+      fbq('track', 'PageView');
+    }
+
+    function addToCart() {
+      fbq('track', 'AddToCart');
+    }
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none" 
+         src="https://www.facebook.com/tr?id=1269438960355048&ev=PageView&noscript=1" />
+  </noscript>
+</body>
+</html>
